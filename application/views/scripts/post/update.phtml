@@ -1,0 +1,20 @@
+<h1 align="center" style="color: whitesmoke;">Create your post</h1>
+<form id="get-data-form" method="post" action="update">
+
+    <input type="hidden" name="id" value="<?php echo $this->post["id"] ?>">
+    <label style="color: whitesmoke; margin-right: 1%; margin-left: 2%;">The title of your post:</label><input type="text" name="title" style="margin-bottom: 3%;" value="<?php echo $this->post["title"] ?>"><br/>
+    <label style="color: whitesmoke; margin-right: 1%; margin-left: 2%; margin-bottom: 2%;">The category of your post:</label>
+    <select name="category_id">
+        <?php foreach ($this->categories as $category){ ?>
+            <option value="<?php echo $category["id"] ?>" <?php echo $category["id"] == $this->post["category_id"] ? "selected" : "" ?>><?php echo $category["name"] ?></option>
+        <?php } ?>
+    </select>
+    <textarea class="tinymce" id="texteditor" name="body">
+        <?php echo $this->post["body"] ?>
+    </textarea>
+    <input type="submit" value="Save Post">
+</form>
+<script type="text/javascript" src="/dist/js/jquery.min.js"></script>
+<script type="text/javascript" src="/dist/plugin/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="/dist/plugin/tinymce/init-tinymce.js"></script>
+<?php ?>

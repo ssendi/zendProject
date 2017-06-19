@@ -1,0 +1,13 @@
+{
+    "name": "ss/zend-project",
+    "require": {
+        "zendframework/zendframework1": "^1.12",
+        "twbs/bootstrap": "^3.3"
+    },
+    "authors": [
+        {
+            "name": "Senedin Kurtovic",
+            "email": "se_ndi@hotmail.com"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+<?php
+foreach ($this->data as $post) {
+	?>
+	<div align="center" style="background: lightgrey; margin-left: 25%; margin-right: 25%; margin-top: 5%; padding-bottom: 1%; "
+		 xmlns="http://www.w3.org/1999/html">
+		<h1 align="center"><?php echo $post["title"]?></h1>
+		<p>
+			<?php echo $post["body"] ?>
+		</p>
+		<h3>Author: <?php echo " ".$post["username"].",     " ?>Category: <?php echo " ".$post["categoryName"] ?></h3>
+	</div>
+	<?php
+}
+?>
+<?php ?>
